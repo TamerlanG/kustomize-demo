@@ -1,0 +1,17 @@
+resources:
+  - "../../base"    
+
+images:
+  - name: myapp 
+    newName: myapp 
+    newTag: 0.0.4
+  
+
+patches:
+  - target:
+      group: apps
+      version: v1
+      kind: Deployment
+      name: myapp
+    path: deployment_patch.yaml
+    
